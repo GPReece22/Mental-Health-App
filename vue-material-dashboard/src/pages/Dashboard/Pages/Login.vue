@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="text-center" style="margin-bottom: 32px;">
-        <h5><strong>You can log in with:</strong></h5>
+        <h5><strong>You can log in using:</strong></h5>
         <div>Username <b>admin@jsonapi.com</b> Password <b>secret</b></div>
       </div>
     </div>
