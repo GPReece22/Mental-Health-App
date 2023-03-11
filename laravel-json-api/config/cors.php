@@ -28,7 +28,7 @@ return [
 
     'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['*'],
 
     'allowed_headers' => [
         'Content-Type',
@@ -49,6 +49,6 @@ return [
     // 'max_age' => 0,
     'max_age' => 60 * 60 * 24,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
