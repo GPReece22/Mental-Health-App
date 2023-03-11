@@ -10,7 +10,6 @@ import UserProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 import ListUserPage from "@/pages/Dashboard/Examples/UserManagement/ListUserPage.vue";
 
 // Pages
-import RtlSupport from "@/pages/Dashboard/Pages/RtlSupport.vue";
 import Login from "@/pages/Dashboard/Pages/Login.vue";
 import Register from "@/pages/Dashboard/Pages/Register.vue";
 
@@ -70,15 +69,7 @@ let componentsMenu = {
       components: { default: Notifications },
       meta: { middleware: auth }
     },
-    {
-      path: "rtl",
-      name: "وحة القيادة",
-      meta: {
-        rtlActive: true,
-        middleware: auth
-      },
-      components: { default: RtlSupport }
-    }
+
   ]
 };
 

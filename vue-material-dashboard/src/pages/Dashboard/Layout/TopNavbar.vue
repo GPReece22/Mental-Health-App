@@ -32,16 +32,6 @@
           </div>
         </li>
 
-        <li class="button-container">
-          <div class="">
-            <md-button
-              class="md-success md-block"
-              :href="downloadUrl"
-              target="_blank"
-              >Download Now
-            </md-button>
-          </div>
-        </li>
 
         <div class="md-collapse">
           <div class="md-autocomplete">
@@ -56,11 +46,6 @@
             </md-autocomplete>
           </div>
           <md-list>
-            <md-list-item href="#/">
-              <i class="material-icons">dashboard</i>
-              <p class="hidden-lg hidden-md">Dashboard</p>
-            </md-list-item>
-
             <li class="md-list-item">
               <a
                 @click="goToNotifications"
@@ -74,15 +59,12 @@
                       data-toggle="dropdown"
                     >
                       <md-icon>notifications</md-icon>
-                      <span class="notification">5</span>
+                      <span class="notification">2</span>
                       <p class="hidden-lg hidden-md">Notifications</p>
                     </md-button>
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#">Mike John responded to your email</a></li>
-                      <li><a href="#">You have 5 new tasks</a></li>
-                      <li><a href="#">You're now friend with Andrew</a></li>
-                      <li><a href="#">Another Notification</a></li>
-                      <li><a href="#">Another One</a></li>
+                      <li><a href="#">Time to add your daily data</a></li>
+                      <li><a href="#">Another notification</a></li>
                     </ul>
                   </drop-down>
                 </div>

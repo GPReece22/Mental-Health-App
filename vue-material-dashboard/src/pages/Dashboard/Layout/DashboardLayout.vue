@@ -15,22 +15,24 @@
       <user-menu></user-menu>
       <mobile-menu></mobile-menu>
       <template slot="links">
+
         <sidebar-item
-          v-if="$route.meta.rtlActive"
           :link="{
-            name: 'لوحة القيادةة',
-            icon: 'dashboard',
-            path: '/dashboard',
-          }"
-        />
-        <sidebar-item
-          v-else
-          :link="{ name: 'Dashboard', icon: 'dashboard', path: '/dashboard' }"
+          name: 'Dashboard',
+          icon: 'dashboard',
+          path: '/dashboard' }"
         />
 
-        <sidebar-item opened :link="{ name: 'Examples (API)', image: image }">
+        <sidebar-item opened
+                      :link="{
+          name: 'Examples (API)',
+          image: image
+        }">
           <sidebar-item
-            :link="{ name: 'User Profile', path: '/examples/user-profile' }"
+            :link="{
+            name: 'User Profile',
+            path: '/examples/user-profile'
+          }"
           />
           <sidebar-item
             :link="{
@@ -41,66 +43,27 @@
         </sidebar-item>
 
         <sidebar-item
-          v-if="$route.meta.rtlActive"
           :link="{
-            name: 'الجداول',
-            icon: 'content_paste',
-            path: '/components/table',
-          }"
-        />
-        <sidebar-item
-          :link="{
-            name: 'Table Lists',
+            name: 'Table Lists [DEV]',
             icon: 'content_paste',
             path: '/components/table',
           }"
         />
 
         <sidebar-item
-          v-if="$route.meta.rtlActive"
           :link="{
-            name: 'طباعة',
-            icon: 'library_books',
-            path: '/components/typography',
-          }"
-        />
-        <sidebar-item
-          v-else
-          :link="{
-            name: 'Typography',
+            name: 'Typography [DEV]',
             icon: 'library_books',
             path: '/components/typography',
           }"
         />
 
         <sidebar-item
-          v-if="$route.meta.rtlActive"
           :link="{
-            name: 'الرموز',
+            name: 'Icons [DEV]',
             icon: 'bubble_chart',
             path: '/components/icons',
           }"
-        />
-        <sidebar-item
-          v-else
-          :link="{
-            name: 'Icons',
-            icon: 'bubble_chart',
-            path: '/components/icons',
-          }"
-        />
-
-        <sidebar-item
-          v-if="$route.meta.rtlActive"
-          :link="{
-            name: 'خرائط جوجل',
-            icon: 'place',
-            path: '/components/maps',
-          }"
-        />
-        <sidebar-item
-          v-else
-          :link="{ name: 'Maps', icon: 'place', path: '/components/maps' }"
         />
 
         <sidebar-item
@@ -112,39 +75,13 @@
           }"
         />
         <sidebar-item
-          v-else
           :link="{
-            name: 'Notifications',
+            name: 'Notifications [DEV]',
             icon: 'notifications',
             path: '/components/notifications',
           }"
         />
-
-        <sidebar-item
-          v-if="$route.meta.rtlActive"
-          :link="{ name: 'دعم رتل', icon: 'language', path: '/components/rtl' }"
-        />
-        <sidebar-item
-          v-else
-          :link="{
-            name: 'RTL Support',
-            icon: 'language',
-            path: '/components/rtl',
-          }"
-        />
       </template>
-
-      <div style="width: 100%; position: absolute; bottom: 0; padding: 16px">
-        <md-button
-          v-if="sidebarMini"
-          class="md-button md-danger md-block"
-          href="https://www.creative-tim.com/product/vue-material-dashboard-laravel-pro"
-          target="_blanck"
-        >
-          <i class="fas fa-download" style="margin-right: 4px"></i>Upgrade to
-          PRO
-        </md-button>
-      </div>
     </side-bar>
 
     <div class="main-panel">
