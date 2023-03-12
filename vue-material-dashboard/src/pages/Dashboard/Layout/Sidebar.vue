@@ -60,7 +60,7 @@
 
         <sidebar-item
             :link="{
-          name: 'View Data',
+          name: 'View My Data',
           icon: 'assessment',
           path: '/view-data' }"
         />
