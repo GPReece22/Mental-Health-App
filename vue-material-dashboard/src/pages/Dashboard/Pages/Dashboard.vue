@@ -102,16 +102,16 @@
         </md-button>
 
         <template slot="content">
-          <h4 class="title">Website Views</h4>
+          <h4 class="title">Lorem Ipsum</h4>
           <p class="category">
-            Last Campaign Performance
+            Lorem ipsum dolor sit amet
           </p>
         </template>
 
         <template slot="footer">
           <div class="stats">
             <md-icon>access_time</md-icon>
-            updated 10 days ago
+            updated 2 days ago
           </div>
         </template>
       </chart-card>
