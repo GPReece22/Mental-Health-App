@@ -154,141 +154,29 @@
         </template>
       </chart-card>
     </div>
-    <div
-      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-    >
-      <chart-card
-        :chart-data="dataCompletedTasksChart.data"
-        :chart-options="dataCompletedTasksChart.options"
-        chart-type="Line"
-        chart-inside-header
-        background-color="blue"
-      >
-        <md-button class="md-simple md-info md-just-icon" slot="first-button">
-          <md-icon>refresh</md-icon>
-          <md-tooltip md-direction="bottom">Refresh</md-tooltip>
-        </md-button>
-        <md-button class="md-simple md-just-icon" slot="second-button">
-          <md-icon>edit</md-icon>
-          <md-tooltip md-direction="bottom">Change Date</md-tooltip>
-        </md-button>
 
-        <template slot="content">
-          <h4 class="title">Completed Tasks</h4>
-          <p class="category">
-            Last Campaign Performance
-          </p>
-        </template>
-
-        <template slot="footer">
-          <div class="stats">
-            <md-icon>access_time</md-icon>
-            campaign sent 26 minutes ago
-          </div>
-        </template>
-      </chart-card>
-    </div>
-
-    <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
+    <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100">
       <md-card>
         <md-card-header class="md-card-header-text md-card-header-warning">
           <div class="card-text">
-            <h4 class="title">Employees Stats</h4>
+            <h4 class="title">Happiest days</h4>
             <p class="category">
-              New employees on 15th September, 2016
+              From the last 6 months
             </p>
           </div>
         </md-card-header>
         <md-card-content>
           <md-table v-model="users" table-header-color="orange">
             <md-table-row slot="md-table-row" slot-scope="{ item }">
-              <md-table-cell md-label="Id">{{ item.id }}</md-table-cell>
-              <md-table-cell md-label="Name">{{ item.name }}</md-table-cell>
-              <md-table-cell md-label="Salary">{{ item.salary }}</md-table-cell>
-              <md-table-cell md-label="Country">{{ item.country }}</md-table-cell>
+              <md-table-cell md-label="Date">{{ item.date }}</md-table-cell>
+              <md-table-cell md-label="Mood Rating">{{ item.moodRating }}</md-table-cell>
+              <md-table-cell md-label="Sleep Time">{{ item.sleepTime }}</md-table-cell>
+              <md-table-cell md-label="Total Steps">{{ item.totalSteps }}</md-table-cell>
+              <md-table-cell md-label="Social Time">{{ item.socialTime }}</md-table-cell>
             </md-table-row>
           </md-table>
         </md-card-content>
       </md-card>
-    </div>
-
-    <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
-      <nav-tabs-card>
-        <template slot="content">
-          <span class="md-nav-tabs-title">Tasks</span>
-          <md-tabs md-sync-route class="md-rose" md-alignment="left">
-            <md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
-              <md-table v-model="firstTabs" @md-selected="onSelect">
-                <md-table-row
-                    slot="md-table-row"
-                    slot-scope="{ item }"
-                    md-selectable="multiple"
-                    md-auto-select
-                >
-                  <md-table-cell>{{ item.tab }}</md-table-cell>
-                  <md-table-cell>
-                    <md-button class="md-just-icon md-simple md-primary">
-                      <md-icon>edit</md-icon>
-                      <md-tooltip md-direction="top">Edit</md-tooltip>
-                    </md-button>
-                    <md-button class="md-just-icon md-simple md-danger">
-                      <md-icon>close</md-icon>
-                      <md-tooltip md-direction="top">Close</md-tooltip>
-                    </md-button>
-                  </md-table-cell>
-                </md-table-row>
-              </md-table>
-            </md-tab>
-
-            <md-tab id="tab-pages" md-label="Website" md-icon="code">
-              <md-table v-model="secondTabs" @md-selected="onSelect">
-                <md-table-row
-                    slot="md-table-row"
-                    slot-scope="{ item }"
-                    md-selectable="multiple"
-                    md-auto-select
-                >
-                  <md-table-cell>{{ item.tab }}</md-table-cell>
-                  <md-table-cell>
-                    <md-button class="md-just-icon md-simple md-primary">
-                      <md-icon>edit</md-icon>
-                      <md-tooltip md-direction="top">Edit</md-tooltip>
-                    </md-button>
-                    <md-button class="md-just-icon md-simple md-danger">
-                      <md-icon>close</md-icon>
-                      <md-tooltip md-direction="top">Close</md-tooltip>
-                    </md-button>
-                  </md-table-cell>
-                </md-table-row>
-              </md-table>
-            </md-tab>
-
-            <md-tab id="tab-posts" md-label="Server" md-icon="cloud">
-              <md-table v-model="thirdTabs" @md-selected="onSelect">
-                <md-table-row
-                    slot="md-table-row"
-                    slot-scope="{ item }"
-                    md-selectable="multiple"
-                    md-auto-select
-                >
-                  <md-table-cell>{{ item.tab }}</md-table-cell>
-                  <md-table-cell>
-                    <md-button class="md-just-icon md-simple md-primary">
-                      <md-icon>edit</md-icon>
-                      <md-tooltip md-direction="top">Edit</md-tooltip>
-                    </md-button>
-                    <md-button class="md-just-icon md-simple md-danger">
-                      <md-icon>close</md-icon>
-                      <md-tooltip md-direction="top">Close</md-tooltip>
-                    </md-button>
-                  </md-table-cell>
-                </md-table-row>
-              </md-table>
-            </md-tab>
-
-          </md-tabs>
-        </template>
-      </nav-tabs-card>
     </div>
 
   </div>
@@ -306,72 +194,45 @@ export default {
   components: {
     StatsCard,
     ChartCard,
-    NavTabsCard
   },
 
   data() {
     return {
-      product1: process.env.VUE_APP_BASE_URL + "/img/card-2.jpg",
-      product2: process.env.VUE_APP_BASE_URL + "/img/card-3.jpg",
-      product3: process.env.VUE_APP_BASE_URL + "/img/card-1.jpg",
-      seq2: 0,
-
-      selected: [],
-      firstTabs: [
-        { tab: "Sign contract for \"What are conference organizers afraid of?\""},
-        { tab: "Lines From Great Russian Literature? Or E-mails From My Boss?" },
-        { tab: "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit" },
-        { tab: "Create 4 Invisible User Experiences you Never Knew About" }
-      ],
-      secondTabs: [
-        {
-          tab:
-            "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit"
-        },
-        {
-          tab:
-            "Sign contract for \"What are conference organizers afraid of?\""
-        }
-      ],
-      thirdTabs: [
-        {
-          tab:
-            "Lines From Great Russian Literature? Or E-mails From My Boss?"
-        },
-        {
-          tab:
-            "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit"
-        },
-        {
-          tab:
-            "Sign contract for \"What are conference organizers afraid of?\""
-        }
-      ],
-
       users: [
         {
-          id: 1,
-          name: "Noelia O'Kon",
-          salary: "13098.00",
-          country: "Niger"
+          date: "06/03/23",
+          moodRating: "97",
+          sleepTime: "7hr 56m",
+          totalSteps: "26,385",
+          socialTime: "1hr"
         },
         {
-          id: 2,
-          name: "Mr. Enid Von PhD",
-          salary: "35978.00",
-          country: "Curaçao"
+          date: "04/01/23",
+          moodRating: "94",
+          sleepTime: "8hr 12m",
+          totalSteps: "9,304",
+          socialTime: "2hr"
         },
         {
-          id: 3,
-          name: "Colton Koch",
-          salary: "26278.00",
-          country: "Netherlands"
+          date: "24/12/22",
+          moodRating: "92",
+          sleepTime: "10hr 36m",
+          totalSteps: "235",
+          socialTime: "4hr"
         },
         {
-          id: 4,
-          name: "Gregory Vandervort",
-          salary: "25537.00",
-          country: "South Korea"
+          date: "30/11/22",
+          moodRating: "89",
+          sleepTime: "5hr 56m",
+          totalSteps: "13,385",
+          socialTime: "0hr"
+        },
+        {
+          date: "09/03/23",
+          moodRating: "87",
+          sleepTime: "8hr 08m",
+          totalSteps: "4,327",
+          socialTime: "3hr"
         },
       ],
       dailySalesChart: {
@@ -393,41 +254,21 @@ export default {
           }
         }
       },
-      dataCompletedTasksChart: {
-        data: {
-          labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-          series: [[230, 750, 450, 300, 280, 240, 200, 190]]
-        },
-
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
-      },
       emailsSubscriptionChart: {
         data: {
           labels: [
-            "Ja",
-            "Fe",
-            "Ma",
-            "Ap",
-            "Mai",
-            "Ju",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
             "Jul",
-            "Au",
-            "Se",
-            "Oc",
-            "No",
-            "De"
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
           ],
           series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
         },
