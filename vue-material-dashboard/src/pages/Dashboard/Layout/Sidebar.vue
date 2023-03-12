@@ -22,31 +22,41 @@
           icon: 'dashboard',
           path: '/dashboard' }"
         />
+
+        <sidebar-item
+            :link="{
+          name: 'Mood Input',
+          icon: 'add_reaction',
+          path: '/data-input/daily-mood' }"
+        />
+
+        <sidebar-item opened
+                      :link="{
+          name: 'Data Input',
+          icon: 'edit_note',
+        }">
+          <sidebar-item
+              :link="{
+            name: 'Manual Input',
+            icon: 'edit_note',
+            path: '/data-input/manual'
+          }"
+          />
+          <sidebar-item
+              :link="{
+              name: 'Smart Device Link',
+              icon: 'watch',
+              path: '/data-input/smart-device',
+            }"
+          />
+        </sidebar-item>
+
         <sidebar-item
             :link="{
           name: 'Dashboard [DEV]',
           icon: 'dashboard',
           path: '/dashboardDev' }"
         />
-
-        <sidebar-item opened
-                      :link="{
-          name: 'Examples (API)',
-          image: image
-        }">
-          <sidebar-item
-            :link="{
-            name: 'User Profile',
-            path: '/examples/user-profile'
-          }"
-          />
-          <sidebar-item
-            :link="{
-              name: 'User Management',
-              path: '/examples/user-management/list-users',
-            }"
-          />
-        </sidebar-item>
 
         <sidebar-item
           :link="{
@@ -72,14 +82,6 @@
           }"
         />
 
-        <sidebar-item
-          v-if="$route.meta.rtlActive"
-          :link="{
-            name: 'إخطارات',
-            icon: 'notifications',
-            path: '/components/notifications',
-          }"
-        />
         <sidebar-item
           :link="{
             name: 'Notifications [DEV]',

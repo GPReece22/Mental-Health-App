@@ -28,6 +28,10 @@ import FullScreenMap from "@/pages/Dashboard/Maps/FullScreenMap.vue";
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
 import DashboardDEV from "@/pages/Dashboard/Pages/DEV/DashboardDEV.vue";
+import Manual from "@/pages/Dashboard/Pages/DataInput/Manual.vue";
+import SmartDeviceLink from "@/pages/Dashboard/Pages/DataInput/SmartDeviceLink.vue";
+import moodInput from "@/pages/Dashboard/Pages/MoodInput.vue";
+import userProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -54,17 +58,6 @@ let componentsMenu = {
       meta: { middleware: auth }
     },
     {
-      path: "maps",
-      name: "Maps",
-      meta: {
-        hideContent: true,
-        hideFooter: true,
-        navbarAbsolute: true,
-        middleware: auth
-      },
-      components: { default: FullScreenMap }
-    },
-    {
       path: "notifications",
       name: "Notifications",
       components: { default: Notifications },
@@ -74,21 +67,21 @@ let componentsMenu = {
   ]
 };
 
-let examplesMenu = {
-  path: "/examples",
+let dataInput = {
+  path: "/data-input",
   component: DashboardLayout,
-  name: "Examples",
+  name: "Data Input",
   children: [
     {
-      path: "user-profile",
-      name: "User Profile",
-      components: { default: UserProfile },
+      path: "manual",
+      name: "Manual",
+      components: { default: Manual },
       meta: { middleware: auth }
     },
     {
-      path: "user-management/list-users",
-      name: "List Users",
-      components: { default: ListUserPage },
+      path: "smart-device",
+      name: "Smart Device",
+      components: { default: SmartDeviceLink },
       meta: { middleware: auth }
     }
   ]
@@ -136,11 +129,23 @@ const routes = [
         name: "DashboardDev",
         components: { default: DashboardDEV },
         meta: { middleware: auth }
+      },
+      {
+        path: "mood-input",
+        name: "Mood Input",
+        components: { default: moodInput },
+        meta: { middleware: auth }
+      },
+      {
+        path: "user-profile",
+        name: "User Profile",
+        components: { default: userProfile },
+        meta: { middleware: auth }
       }
     ]
   },
   componentsMenu,
-  examplesMenu,
+  dataInput,
   authPages
 ];
 
