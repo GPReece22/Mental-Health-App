@@ -6,16 +6,6 @@
     :data-background-color="backgroundColor"
     :style="sidebarStyle"
   >
-    <div class="logo">
-      <a href="https://www.creative-tim.com" class="simple-text logo-mini" target="_blank">
-        <div style="padding: 4px 0;">
-          CT
-        </div>
-      </a>
-      <a href="https://www.creative-tim.com" class="simple-text logo-normal" target="_blank">
-        <template v-if="$route.meta.rtlActive">{{ rtlTitle }}</template>
-        <template v-else>{{ title }}</template>
-      </a>
 <!--      <div class="navbar-minimize">-->
 <!--        <md-button-->
 <!--          id="minimizeSidebar"-->
@@ -31,7 +21,6 @@
 <!--          >-->
 <!--        </md-button>-->
 <!--      </div>-->
-    </div>
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <slot></slot>
       <md-list class="nav">
@@ -59,11 +48,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Creative Tim"
-    },
-    rtlTitle: {
-      type: String,
-      default: "توقيت الإبداعية"
+      default: "Hello Again"
     },
     activeColor: {
       type: String,
