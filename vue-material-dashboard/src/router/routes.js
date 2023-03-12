@@ -1,8 +1,8 @@
-import DashboardLayout from "@/pages/Dashboard/Layout/DashboardLayout.vue";
-import AuthLayout from "@/pages/Dashboard/Pages/AuthLayout.vue";
+import DashboardLayout from "@/pages/Dashboard/Layout/Sidebar.vue";
+import AuthLayout from "@/pages/Dashboard/Layout/AuthLayout.vue";
 
 // Dashboard pages
-import Dashboard from "@/pages/Dashboard/Dashboard.vue";
+import Dashboard from "@/pages/Dashboard/Pages/Dashboard.vue";
 // Profile
 import UserProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 
@@ -10,8 +10,8 @@ import UserProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 import ListUserPage from "@/pages/Dashboard/Examples/UserManagement/ListUserPage.vue";
 
 // Pages
-import Login from "@/pages/Dashboard/Pages/Login.vue";
-import Register from "@/pages/Dashboard/Pages/Register.vue";
+import Login from "@/pages/Dashboard/Pages/Auth/Login.vue";
+import Register from "@/pages/Dashboard/Pages/Auth/Register.vue";
 
 // Components pages
 import Notifications from "@/pages/Dashboard/Components/Notifications.vue";

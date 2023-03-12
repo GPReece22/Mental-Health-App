@@ -4,7 +4,7 @@ import Notifications from "@/components/NotificationPlugin";
 import GlobalComponents from "./globalComponents";
 // A plugin file where you could register global directives
 import GlobalDirectives from "./globalDirectives";
-// Sidebar on the right. Used as a local plugin in DashboardLayout.vue
+// Sidebar on the right. Used as a local plugin in Sidebar.vue
 import SideBar from "./components/SidebarPlugin";
 // Tabs plugin. Used on Panels page.
 

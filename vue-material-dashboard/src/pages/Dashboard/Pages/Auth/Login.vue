@@ -2,15 +2,14 @@
   <div class="md-layout text-center login-fix-page">
     <div class="md-layout-item md-size-100">
       <div class="text-center">
-        <h3>Log in to Vue Material Dashboard Laravel Live Preview</h3>
+        <h3>Log in to Mental Health Test App </h3>
         <p>
-          Log in to see how you can go from frontend to fullstack in an instant
-          with an API-based Laravel backend.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
       <div class="text-center" style="margin-bottom: 32px;">
-        <h5><strong>You can log in using:</strong></h5>
-        <div>Username <b>admin@jsonapi.com</b> Password <b>secret</b></div>
+        <h5><strong>For test purposes here - you can log in using:</strong></h5>
+        <div>Username: <b>admin@jsonapi.com</b> Password: <b>secret</b></div>
       </div>
     </div>
 
@@ -20,28 +19,7 @@
       <form @submit.prevent="login">
         <login-card header-color="green">
           <h4 slot="title" class="title">Log in</h4>
-          <md-button
-            slot="buttons"
-            ref="#facebook"
-            class="md-just-icon md-simple md-white"
-          >
-            <i class="fab fa-facebook-square"></i>
-          </md-button>
-          <md-button
-            slot="buttons"
-            href="#twitter"
-            class="md-just-icon md-simple md-white"
-          >
-            <i class="fab fa-twitter"></i>
-          </md-button>
-          <md-button
-            slot="buttons"
-            href="#google"
-            class="md-just-icon md-simple md-white"
-          >
-            <i class="fab fa-google-plus-g"></i>
-          </md-button>
-          <p slot="description" class="description">Or Be Classical</p>
+          <p slot="description" class="description">Lorem ipsum</p>
           <md-field
             class="form-group md-invalid"
             slot="inputs"
