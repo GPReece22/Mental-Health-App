@@ -21,9 +21,6 @@ import Typography from "@/pages/Dashboard/Components/Typography.vue";
 // TableList pages
 import RegularTables from "@/pages/Dashboard/Tables/RegularTables.vue";
 
-// Maps pages
-import FullScreenMap from "@/pages/Dashboard/Maps/FullScreenMap.vue";
-
 //import middleware
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
@@ -33,6 +30,7 @@ import SmartDeviceLink from "@/pages/Dashboard/Pages/DataInput/SmartDeviceLink.v
 import moodInput from "@/pages/Dashboard/Pages/MoodInput.vue";
 import userProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 import viewData from "@/pages/Dashboard/Pages/ViewData.vue";
+import weeklyReport from "@/pages/Dashboard/Pages/WeeklyReport.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -147,6 +145,12 @@ const routes = [
         path: "view-data",
         name: "View Data",
         components: { default: viewData },
+        meta: { middleware: auth }
+      },
+      {
+        path: "weekly-report",
+        name: "Weekly Report",
+        components: { default: weeklyReport },
         meta: { middleware: auth }
       }
     ]

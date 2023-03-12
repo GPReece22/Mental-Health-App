@@ -53,7 +53,14 @@
 
         <sidebar-item
             :link="{
-          name: 'View Data',
+          name: 'Weekly Report',
+          icon: 'assignment',
+          path: '/weekly-report' }"
+        />
+
+        <sidebar-item
+            :link="{
+          name: 'View My Data',
           icon: 'assessment',
           path: '/view-data' }"
         />
