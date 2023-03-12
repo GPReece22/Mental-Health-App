@@ -114,23 +114,18 @@ import formMixin from "@/mixins/form-mixin";
 export default {
   name: "mood-input-card",
 
-  props: {
-    user: Object,
-  },
-
   components: {  },
 
   mixins: [formMixin],
 
   data() {
     return {
-      default_img: process.env.VUE_APP_BASE_URL + "/img/placeholder.jpg",
       ratings: {
         mood: 0,
         energy: 0,
         anger: 0,
         motivation: 0,
-        concentration :0
+        concentration: 0
       },
       showHelp: false
     };
@@ -138,27 +133,16 @@ export default {
 
   methods: {
     async updateProfile() {
-      if (["1", "2", "3"].includes(this.user.id)) {
-        await this.$store.dispatch(
-          "alerts/error",
-          "You are not allowed not change data of default users."
-        );
-        return;
-      }
-
       try {
-        await this.$store.dispatch("profile/update", this.user);
         await this.$store.dispatch(
           "alerts/success",
-          "Profile updated successfully."
+          "Submitted successfully."
         );
-        await this.$store.getters["profile/me"];
       } catch (e) {
         await this.$store.dispatch(
           "alerts/error",
           "Oops, something went wrong!"
         );
-        this.setApiValidation(e.response.data.errors);
       }
     },
   },

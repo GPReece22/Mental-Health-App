@@ -21,9 +21,6 @@ import Typography from "@/pages/Dashboard/Components/Typography.vue";
 // TableList pages
 import RegularTables from "@/pages/Dashboard/Tables/RegularTables.vue";
 
-// Maps pages
-import FullScreenMap from "@/pages/Dashboard/Maps/FullScreenMap.vue";
-
 //import middleware
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
