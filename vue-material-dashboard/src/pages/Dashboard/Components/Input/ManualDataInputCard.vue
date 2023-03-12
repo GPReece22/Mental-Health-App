@@ -3,31 +3,83 @@
     <md-card>
       <md-card-header class="md-card-header-icon">
         <div class="card-icon">
-          <md-icon>add_reaction</md-icon>
+          <md-icon>edit_note</md-icon>
         </div>
         <h4 class="title">
-          How have you felt today?
+          Please Input your data for today (GET DATE)
         </h4>
+        <div class="md-label-on-right">
+          <md-button @click = "showHelp = true"> <md-icon>help</md-icon></md-button>
+          <div>
+            <md-dialog :md-active.sync="showHelp">
+              <md-dialog-title>Input help</md-dialog-title>
+              <p>Lorem Ipsum</p>
+            </md-dialog>
+          </div>
+        </div>
       </md-card-header>
-
-      <md-button @click = "showHelp = true"> <md-icon>help</md-icon></md-button>
-      <div>
-        <md-dialog :md-active.sync="showHelp">
-          <md-dialog-title>Mood Rating</md-dialog-title>
-          <p>1 = felt very bad today</p>
-          <p>5 = felt very good today</p>
-        </md-dialog>
-      </div>
 
       <md-card-content>
         <div class="md-layout">
           <label class="md-layout-item md-size-15 md-form-label">
-            Mood
+            Total Steps
           </label>
           <div class="md-layout-item">
             <md-field>
-              <label>Initial Value</label>
-              <md-input v-model="initial"></md-input>
+              <md-input v-model="steps" type="number" min="0">
+              </md-input>
+              <span class="md-suffix">Steps</span>
+            </md-field>
+          </div>
+        </div>
+        <div class="md-layout">
+          <label class="md-layout-item md-size-15 md-form-label">
+            Additional Exercise Time
+          </label>
+          <div class="md-layout-item">
+            <md-field>
+              <md-input v-model="exerciseTime" type="time" min="0">
+              </md-input>
+              <span class="md-suffix">HH:mm</span>
+            </md-field>
+          </div>
+        </div>
+
+        <div class="md-layout">
+          <label class="md-layout-item md-size-15 md-form-label">
+            Total Calories
+          </label>
+          <div class="md-layout-item">
+            <md-field>
+              <md-input v-model="calories" type="number" min="0">
+              </md-input>
+              <span class="md-suffix">kcal</span>
+            </md-field>
+          </div>
+        </div>
+
+        <div class="md-layout">
+        <label class="md-layout-item md-size-15 md-form-label">
+          Sleep Time
+        </label>
+        <div class="md-layout-item">
+          <md-field>
+            <md-input v-model="sleepTime" type="time" min="0">
+            </md-input>
+            <span class="md-suffix">HH:mm</span>
+          </md-field>
+        </div>
+        </div>
+
+        <div class="md-layout">
+          <label class="md-layout-item md-size-15 md-form-label">
+            Social Time
+          </label>
+          <div class="md-layout-item">
+            <md-field>
+              <md-input v-model="socialTime" type="time" min="0">
+              </md-input>
+              <span class="md-suffix">HH:mm</span>
             </md-field>
           </div>
         </div>
@@ -53,13 +105,11 @@ export default {
 
   data() {
     return {
-      ratings: {
-        mood: 0,
-        energy: 0,
-        anger: 0,
-        motivation: 0,
-        concentration: 0
-      },
+      steps: 0,
+      calories: 0,
+      sleepTime: 0,
+      socialTime: 0,
+      exerciseTime: 0,
       showHelp: false
     };
   },

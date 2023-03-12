@@ -10,20 +10,19 @@
         </h4>
       </md-card-header>
 
-      <md-button @click = "showHelp = true"> <md-icon>help</md-icon></md-button>
-      <div>
-        <md-dialog :md-active.sync="showHelp">
-          <md-dialog-title>Mood Rating</md-dialog-title>
-          <p>1 = felt very bad today</p>
-          <p>5 = felt very good today</p>
-        </md-dialog>
-      </div>
-
       <md-card-content>
         <div class="md-layout">
           <label class="md-layout-item md-size-15 md-form-label">
             Mood
           </label>
+
+          <md-icon>help
+            <md-tooltip md-direction="top">
+            <p>1 = felt very bad today</p>
+            <p>5 = felt very good today</p>
+          </md-tooltip>
+          </md-icon>
+
           <div class="md-layout-item">
             <md-field class="md-invalid">
               <md-radio v-model="ratings.mood" :value="1"><md-icon>sentiment_very_dissatisfied</md-icon></md-radio>
@@ -126,8 +125,7 @@ export default {
         anger: 0,
         motivation: 0,
         concentration: 0
-      },
-      showHelp: false
+      }
     };
   },
 

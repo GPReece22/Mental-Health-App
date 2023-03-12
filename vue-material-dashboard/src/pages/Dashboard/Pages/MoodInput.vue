@@ -1,9 +1,7 @@
 <template>
-    <div class="md-layout-item md-size-100">
-      <div class="md-layout-item md-size-100">
-        <mood-input-card :user="user"/>
-      </div>
-    </div>
+  <div class="md-layout-item md-size-100">
+    <mood-input-card :user="user"/>
+  </div>
 </template>
 
 <script>

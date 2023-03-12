@@ -30,6 +30,7 @@ import SmartDeviceLink from "@/pages/Dashboard/Pages/DataInput/SmartDeviceLink.v
 import moodInput from "@/pages/Dashboard/Pages/MoodInput.vue";
 import userProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 import viewData from "@/pages/Dashboard/Pages/ViewData.vue";
+import weeklyReport from "@/pages/Dashboard/Pages/WeeklyReport.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -144,6 +145,12 @@ const routes = [
         path: "view-data",
         name: "View Data",
         components: { default: viewData },
+        meta: { middleware: auth }
+      },
+      {
+        path: "weekly-report",
+        name: "Weekly Report",
+        components: { default: weeklyReport },
         meta: { middleware: auth }
       }
     ]
