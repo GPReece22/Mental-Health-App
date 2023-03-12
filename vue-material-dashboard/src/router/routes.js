@@ -27,6 +27,7 @@ import FullScreenMap from "@/pages/Dashboard/Maps/FullScreenMap.vue";
 //import middleware
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
+import DashboardDEV from "@/pages/Dashboard/Pages/DEV/DashboardDEV.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -128,6 +129,12 @@ const routes = [
         path: "dashboard",
         name: "Dashboard",
         components: { default: Dashboard },
+        meta: { middleware: auth }
+      },
+      {
+        path: "dashboardDev",
+        name: "DashboardDev",
+        components: { default: DashboardDEV },
         meta: { middleware: auth }
       }
     ]

@@ -22,6 +22,12 @@
           icon: 'dashboard',
           path: '/dashboard' }"
         />
+        <sidebar-item
+            :link="{
+          name: 'Dashboard [DEV]',
+          icon: 'dashboard',
+          path: '/dashboardDev' }"
+        />
 
         <sidebar-item opened
                       :link="{

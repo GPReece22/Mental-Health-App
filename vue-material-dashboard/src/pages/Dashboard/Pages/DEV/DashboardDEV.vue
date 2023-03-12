@@ -1,17 +1,17 @@
 <template>
   <div class="md-layout">
-
     <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
       <stats-card header-color="blue">
         <template slot="header">
           <div class="card-icon">
-            <md-icon>done</md-icon>
+            <i class="fab fa-twitter"></i>
           </div>
-          <p class="category">Tasks completed today</p>
+          <p class="category">Folowers</p>
           <h3 class="title">
-            3/5
+            +245
           </h3>
         </template>
+
         <template slot="footer">
           <div class="stats">
             <md-icon>update</md-icon>
@@ -20,62 +20,62 @@
         </template>
       </stats-card>
     </div>
-
     <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
       <stats-card header-color="rose">
         <template slot="header">
           <div class="card-icon">
-            <md-icon>local_fire_department</md-icon>
+            <md-icon>equalizer</md-icon>
           </div>
-          <p class="category">Daily streak</p>
+          <p class="category">Website Visits</p>
           <h3 class="title">
-            6 Days
+            75.521
           </h3>
         </template>
+
         <template slot="footer">
           <div class="stats">
-            <md-icon>update</md-icon>
-            28 minutes ago
+            <md-icon>local_offer</md-icon>
+            Tracked from Google Analytics
           </div>
         </template>
       </stats-card>
     </div>
-
     <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
       <stats-card header-color="green">
         <template slot="header">
           <div class="card-icon">
-            <md-icon>mood</md-icon>
+            <md-icon>store</md-icon>
           </div>
-          <p class="category">Mood Rating Today</p>
+          <p class="category">Revenue</p>
           <h3 class="title">
-            38
+            $ 34.245
           </h3>
         </template>
+
         <template slot="footer">
           <div class="stats">
-            <md-icon>update</md-icon>
-            4 minutes ago
+            <md-icon>date_range</md-icon>
+            Last 24 Hours
           </div>
         </template>
       </stats-card>
     </div>
-
     <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
       <stats-card header-color="warning">
         <template slot="header">
           <div class="card-icon">
-            <md-icon>watch</md-icon>
+            <md-icon>weekend</md-icon>
           </div>
-          <p class="category">Smart Device Sync Status</p>
+          <p class="category">Bookings</p>
           <h3 class="title">
-            Sync Unsuccessful
+            184
           </h3>
         </template>
+
         <template slot="footer">
           <div class="stats">
             <md-icon class="text-danger">warning</md-icon>
-            <a href="#pablo">Re-sync here</a>
+            <a href="#pablo">Get More Space...</a>
           </div>
         </template>
       </stats-card>
@@ -136,13 +136,13 @@
         </md-button>
 
         <template slot="content">
-          <h4 class="title">Daily Mood rating</h4>
+          <h4 class="title">Daily Sales</h4>
           <p class="category">
             <span class="text-success"
               ><i class="fas fa-long-arrow-alt-up"></i>
               55%
             </span>
-            Increase in average rating from last week.
+            increase in today sales.
           </p>
         </template>
 

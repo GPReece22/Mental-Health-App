@@ -21,18 +21,6 @@
           <span class="icon-bar"></span>
         </md-button>
 
-        <li class="button-container" style="margin-right: 10px">
-          <div class="">
-            <md-button
-              class="md-default md-block"
-              :href="documentationLink"
-              target="_blank"
-              >Documentation
-            </md-button>
-          </div>
-        </li>
-
-
         <div class="md-collapse">
           <div class="md-autocomplete">
             <md-autocomplete
