@@ -1,13 +1,13 @@
 <template>
   <div class="md-layout">
     <div class="md-layout-item md-size-100">
+      <weekly-suggestions-card/>
+    </div>
+    <div class="md-layout-item md-size-100">
       <interactive-graph-card/>
     </div>
     <div class="md-layout-item md-size-100">
       <interactive-table-card/>
-    </div>
-    <div class="md-layout-item md-size-100">
-      <weekly-suggestion-card/>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   components: {
     "interactive-graph-card": InteractiveGraphCard,
     "interactive-table-card": InteractiveTableCard,
-    "weekly-suggestion-card": WeeklySuggestionsCard
+    "weekly-suggestions-card": WeeklySuggestionsCard
   },
 
   data: () => ({

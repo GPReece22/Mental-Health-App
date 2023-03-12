@@ -29,15 +29,15 @@ export default {
       suggestions: [
         {
           number: "1",
-          suggestion: "Lorem Ipsum"
+          suggestion: "You tend to have more energy when you get more than 7 hours sleep, try to get this whenever you can"
         },
         {
           number: "2",
-          suggestion: "Lorem Ipsum"
+          suggestion: "You tend to become more angry when you do more than 20,000 steps in a day, try to avoid this in future"
         },
         {
           number: "3",
-          suggestion: "Lorem Ipsum"
+          suggestion: "On days you had 1 hour or more social time you were more motivated, try to keep this up"
         },
       ]
     };
