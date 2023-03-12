@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import MoodInputCard from "@/pages/Dashboard/Components/MoodInputCard.vue";
+  import MoodInputCard from "@/pages/Dashboard/Components/Input/MoodInputCard.vue";
 
   export default {
     name: "user-profile-example",
