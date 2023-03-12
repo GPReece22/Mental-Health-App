@@ -27,7 +27,7 @@
             :link="{
           name: 'Mood Input',
           icon: 'add_reaction',
-          path: '/data-input/daily-mood' }"
+          path: '/mood-input' }"
         />
 
         <sidebar-item opened
@@ -53,7 +53,14 @@
 
         <sidebar-item
             :link="{
-          name: 'Dashboard [DEV]',
+          name: 'View Data',
+          icon: 'assessment',
+          path: '/view-data' }"
+        />
+
+        <sidebar-item
+            :link="{
+          name: 'Dashboard Elements [DEV]',
           icon: 'dashboard',
           path: '/dashboardDev' }"
         />

@@ -32,6 +32,7 @@ import Manual from "@/pages/Dashboard/Pages/DataInput/Manual.vue";
 import SmartDeviceLink from "@/pages/Dashboard/Pages/DataInput/SmartDeviceLink.vue";
 import moodInput from "@/pages/Dashboard/Pages/MoodInput.vue";
 import userProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
+import viewData from "@/pages/Dashboard/Pages/ViewData.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -140,6 +141,12 @@ const routes = [
         path: "user-profile",
         name: "User Profile",
         components: { default: userProfile },
+        meta: { middleware: auth }
+      },
+      {
+        path: "view-data",
+        name: "View Data",
+        components: { default: viewData },
         meta: { middleware: auth }
       }
     ]
