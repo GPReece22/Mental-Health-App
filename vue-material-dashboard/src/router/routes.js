@@ -1,8 +1,8 @@
-import DashboardLayout from "@/pages/Dashboard/Layout/DashboardLayout.vue";
-import AuthLayout from "@/pages/Dashboard/Pages/AuthLayout.vue";
+import DashboardLayout from "@/pages/Dashboard/Layout/Sidebar.vue";
+import AuthLayout from "@/pages/Dashboard/Layout/AuthLayout.vue";
 
 // Dashboard pages
-import Dashboard from "@/pages/Dashboard/Dashboard.vue";
+import Dashboard from "@/pages/Dashboard/Pages/Dashboard.vue";
 // Profile
 import UserProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 
@@ -10,8 +10,8 @@ import UserProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
 import ListUserPage from "@/pages/Dashboard/Examples/UserManagement/ListUserPage.vue";
 
 // Pages
-import Login from "@/pages/Dashboard/Pages/Login.vue";
-import Register from "@/pages/Dashboard/Pages/Register.vue";
+import Login from "@/pages/Dashboard/Pages/Auth/Login.vue";
+import Register from "@/pages/Dashboard/Pages/Auth/Register.vue";
 
 // Components pages
 import Notifications from "@/pages/Dashboard/Components/Notifications.vue";
@@ -27,6 +27,12 @@ import FullScreenMap from "@/pages/Dashboard/Maps/FullScreenMap.vue";
 //import middleware
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
+import DashboardDEV from "@/pages/Dashboard/Pages/DEV/DashboardDEV.vue";
+import Manual from "@/pages/Dashboard/Pages/DataInput/Manual.vue";
+import SmartDeviceLink from "@/pages/Dashboard/Pages/DataInput/SmartDeviceLink.vue";
+import moodInput from "@/pages/Dashboard/Pages/MoodInput.vue";
+import userProfile from "@/pages/Dashboard/Examples/UserProfile.vue";
+import viewData from "@/pages/Dashboard/Pages/ViewData.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -53,17 +59,6 @@ let componentsMenu = {
       meta: { middleware: auth }
     },
     {
-      path: "maps",
-      name: "Maps",
-      meta: {
-        hideContent: true,
-        hideFooter: true,
-        navbarAbsolute: true,
-        middleware: auth
-      },
-      components: { default: FullScreenMap }
-    },
-    {
       path: "notifications",
       name: "Notifications",
       components: { default: Notifications },
@@ -73,21 +68,21 @@ let componentsMenu = {
   ]
 };
 
-let examplesMenu = {
-  path: "/examples",
+let dataInput = {
+  path: "/data-input",
   component: DashboardLayout,
-  name: "Examples",
+  name: "Data Input",
   children: [
     {
-      path: "user-profile",
-      name: "User Profile",
-      components: { default: UserProfile },
+      path: "manual",
+      name: "Manual",
+      components: { default: Manual },
       meta: { middleware: auth }
     },
     {
-      path: "user-management/list-users",
-      name: "List Users",
-      components: { default: ListUserPage },
+      path: "smart-device",
+      name: "Smart Device",
+      components: { default: SmartDeviceLink },
       meta: { middleware: auth }
     }
   ]
@@ -129,11 +124,35 @@ const routes = [
         name: "Dashboard",
         components: { default: Dashboard },
         meta: { middleware: auth }
+      },
+      {
+        path: "dashboardDev",
+        name: "DashboardDev",
+        components: { default: DashboardDEV },
+        meta: { middleware: auth }
+      },
+      {
+        path: "mood-input",
+        name: "Mood Input",
+        components: { default: moodInput },
+        meta: { middleware: auth }
+      },
+      {
+        path: "user-profile",
+        name: "User Profile",
+        components: { default: userProfile },
+        meta: { middleware: auth }
+      },
+      {
+        path: "view-data",
+        name: "View Data",
+        components: { default: viewData },
+        meta: { middleware: auth }
       }
     ]
   },
   componentsMenu,
-  examplesMenu,
+  dataInput,
   authPages
 ];
 

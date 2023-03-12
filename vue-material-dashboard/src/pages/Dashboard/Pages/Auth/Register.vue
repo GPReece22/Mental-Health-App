@@ -28,19 +28,6 @@
             class="md-layout-item md-size-50 md-medium-size-50 md-small-size-100 mr-auto"
             slot="content-right"
           >
-            <div class="social-line text-center">
-              <md-button class="md-just-icon md-round md-twitter">
-                <i class="fab fa-twitter"></i>
-              </md-button>
-              <md-button class="md-just-icon md-round md-dribbble">
-                <i class="fab fa-dribbble"></i>
-              </md-button>
-              <md-button class="md-just-icon md-round md-facebook">
-                <i class="fab fa-facebook-f"></i>
-              </md-button>
-              <h4 class="mt-3">or be classical</h4>
-            </div>
-
             <md-field
               class="md-form-group md-invalid"
               style="margin-bottom: 2rem"
@@ -121,25 +108,25 @@ export default {
         {
           colorIcon: "icon-success",
           icon: "timeline",
-          title: "Marketing",
+          title: "Track your mental health",
           description:
-            "We've created the marketing campaign of the website. It was a very interesting collaboration.",
+            "Track your daily activities and how they are affecting your mental health",
         },
 
         {
           colorIcon: "icon-danger",
           icon: "code",
-          title: "Fully Coded in HTML5",
+          title: "Lorem Ipsum",
           description:
-            "We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
 
         {
           colorIcon: "icon-info",
           icon: "group",
-          title: "Built Audience",
+          title: "Lorem Ipsum",
           description:
-            "There is also a Fully Customizable CMS Admin Dashboard for this product.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
       ],
     };
