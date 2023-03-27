@@ -19,10 +19,14 @@ import App from "./App.vue";
 import Chartist from "chartist";
 import VueAxios from "vue-axios";
 import DashboardPlugin from "./material-dashboard";
+import VueApexCharts from 'vue-apexcharts';
+
 
 // plugin setup
 Vue.use(DashboardPlugin);
 Vue.use(VueAxios, axios);
+Vue.use(VueApexCharts);
+
 
 // router & store setup
 import router from "./router";

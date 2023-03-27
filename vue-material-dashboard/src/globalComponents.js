@@ -7,6 +7,8 @@ import {
   FadeTransition,
   ZoomCenterTransition
 } from "../node_modules/vue2-transitions";
+import Vue from "vue";
+import VueApexCharts from "vue-apexcharts";
 /**
  * You can register global components here and use them as a plugin in your main Vue instance
  */
@@ -20,6 +22,7 @@ const GlobalComponents = {
     Vue.component("SlideYDownTransition", SlideYDownTransition);
     Vue.component("FadeTransition", FadeTransition);
     Vue.component("ZoomCenterTransition", ZoomCenterTransition);
+    Vue.component('apexchart', VueApexCharts);
   }
 };
 
