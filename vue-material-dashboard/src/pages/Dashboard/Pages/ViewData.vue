@@ -4,20 +4,25 @@
       <interactive-graph-card/>
     </div>
     <div class="md-layout-item md-size-100">
+      <rolling-interactive-graph-card/>
+    </div>
+    <div class="md-layout-item md-size-100">
       <interactive-table-card/>
     </div>
   </div>
 </template>
 
 <script>
-import InteractiveGraphCard from "@/pages/Dashboard/Components/Data/InteractiveGraphCard.vue";
+import RollingInteractiveGraphCard from "@/pages/Dashboard/Components/Data/RollingInteractiveGraphCard.vue";
 import InteractiveTableCard from "@/pages/Dashboard/Components/Data/InteractiveTableCard.vue";
+import InteractiveGraphCard from "@/pages/Dashboard/Components/Data/InteractiveGraphCard.vue";
 
 export default {
   name: "view-data",
 
   components: {
     "interactive-graph-card": InteractiveGraphCard,
+    "rolling-interactive-graph-card": RollingInteractiveGraphCard,
     "interactive-table-card": InteractiveTableCard
   },
 

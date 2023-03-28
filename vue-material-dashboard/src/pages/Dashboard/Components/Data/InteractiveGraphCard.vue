@@ -1,74 +1,54 @@
 <template>
-      <chart-card
-        :chart-data="dailySalesChart.data"
-        :chart-options="dailySalesChart.options"
-        chart-type="Line"
-        chart-inside-header
-        background-color="green"
-      >
-        <md-button class="md-simple md-info md-just-icon" slot="first-button">
-          <md-icon>refresh</md-icon>
-          <md-tooltip md-direction="bottom">Refresh</md-tooltip>
-        </md-button>
-        <md-button class="md-simple md-just-icon" slot="second-button">
-          <md-icon>edit</md-icon>
-          <md-tooltip md-direction="bottom">Change Date</md-tooltip>
-        </md-button>
-
-        <template slot="content">
-          <h4 class="title">Daily Mood rating</h4>
-          <p class="category">
-            <span class="text-success"
-              ><i class="fas fa-long-arrow-alt-up"></i>
-              55%
-            </span>
-            Increase in average rating from last week.
-          </p>
-        </template>
-
-        <template slot="footer">
-          <div class="stats">
-            <md-icon>access_time</md-icon>
-            updated 4 minutes ago
-          </div>
-        </template>
-      </chart-card>
+  <div>
+    <apexchart width="100%" type="area" :options="options" :series="series"></apexchart>
+  </div>
 </template>
 
 <script>
 
-import {
-  ChartCard,
-} from "@/components";
-
 export default {
   components: {
-    ChartCard,
   },
 
   data() {
     return {
-      dailySalesChart: {
-        data: {
-          labels: ["M", "T", "W", "T", "F", "S", "S"],
-          series: [[12, 17, 7, 17, 23, 18, 9],
-                  [5, 4, 2, 5, 7, 8, 8]
-          ]
+      options: {
+        chart: {
+          id: 'vuechart-example'
         },
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 30, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
+        xaxis: {
+          categories: ["24/02", "25/02", "26/02", "27/02", "28/02", "01/03", "02/03", "03/03", "04/03", "05/03",
+            "06/03", "07/03", "08/03", "09/03", "10/03", "11/03", "12/03", "13/03", "14/03", "15/03", "16/03", "17/03",
+            "18/03", "19/03", "20/03", "21/03", "22/03", "23/03", "24/03", "25/03", "26/03"]
+        },
+        theme: {
+          palette: "palette2"
+        },
+        dataLabels: {
+          enabled: false
+        },
+        title: {
+          text: 'Last 31 days data (all numbers are as a % of maximum value given in last 31 days)'
+        },
       },
+      series: [
+        {
+          name: 'Steps',
+          data: [56, 23, 56, 78, 30, 40, 45, 50, 49, 60, 70, 45, 23, 76, 90, 43, 56, 32, 78, 0, 12, 40, 99, 93, 23, 100, 12, 45, 23, 67, 33]
+        },
+        {
+          name: 'Social Time',
+          data: [43, 56, 32, 78, 0, 12, 40, 56, 23, 56, 78, 30, 40, 45, 50, 49, 60, 70, 99, 93, 23, 30, 40, 45, 50, 49, 60, 70, 45, 23, 76]
+        },
+        {
+          name: 'Sleep Time',
+          data: [ 50, 49, 60, 70, 99, 93, 23, 30, 40, 45, 50, 49, 60, 49, 60, 70, 43, 56, 32, 78, 0, 78, 30, 40, 45, 50, 49, 60, 70, 45, 23]
+        },
+        {
+          name: 'Health score',
+          data: [30, 40, 45, 50, 49, 60, 70, 43, 56, 32, 78, 0, 12, 56, 23, 56, 78, 30, 40, 45, 50, 49, 60, 70, 40, 99, 93, 23, 45, 23, 76]
+        },
+      ]
     };
   },
 
