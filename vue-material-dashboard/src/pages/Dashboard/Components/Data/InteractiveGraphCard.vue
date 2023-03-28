@@ -1,6 +1,6 @@
 <template>
   <div>
-    <apexchart width="100%" type="line" :options="options" :series="series"></apexchart>
+    <apexchart width="100%" type="area" :options="options" :series="series"></apexchart>
   </div>
 </template>
 
@@ -24,8 +24,11 @@ export default {
         theme: {
           palette: "palette2"
         },
+        dataLabels: {
+          enabled: false
+        },
         title: {
-          text: 'HeatMap of last 7 days data (all numbers are as a % of maximum value given in last 31 days)'
+          text: 'Last 31 days data (all numbers are as a % of maximum value given in last 31 days)'
         },
       },
       series: [
@@ -34,8 +37,12 @@ export default {
           data: [56, 23, 56, 78, 30, 40, 45, 50, 49, 60, 70, 45, 23, 76, 90, 43, 56, 32, 78, 0, 12, 40, 99, 93, 23, 100, 12, 45, 23, 67, 33]
         },
         {
-          name: 'Social Time (hours)',
+          name: 'Social Time',
           data: [43, 56, 32, 78, 0, 12, 40, 56, 23, 56, 78, 30, 40, 45, 50, 49, 60, 70, 99, 93, 23, 30, 40, 45, 50, 49, 60, 70, 45, 23, 76]
+        },
+        {
+          name: 'Sleep Time',
+          data: [ 50, 49, 60, 70, 99, 93, 23, 30, 40, 45, 50, 49, 60, 49, 60, 70, 43, 56, 32, 78, 0, 78, 30, 40, 45, 50, 49, 60, 70, 45, 23]
         },
         {
           name: 'Health score',

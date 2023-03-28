@@ -37,9 +37,13 @@ export default {
           data: [43, 56, 32, 78, 0, 12, 40]
         },
         {
-          name: 'Health score',
-          data: [30, 40, 45, 50, 49, 60, 70]
+          name: 'Sleep Time',
+          data: [ 50, 49, 60, 70, 99, 93, 23]
         },
+        {
+          name: 'Health score',
+          data: [30, 40, 35, 70, 59, 62, 83]
+        }
       ]
     };
   },

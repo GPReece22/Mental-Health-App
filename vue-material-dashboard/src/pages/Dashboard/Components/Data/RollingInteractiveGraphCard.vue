@@ -23,22 +23,26 @@ export default {
           palette: "palette2"
         },
         title: {
-          text: 'Average for each month (all numbers are as a % of maximum value given in last 31 days)'
+          text: 'Average for each month (all numbers are as a % of maximum value given in last 12 months)'
         },
       },
       series: [
         {
           name: 'Steps',
-          data: [56, 23, 56, 78, 90, 100, 12]
+          data: [56, 23, 56, 78, 90, 100, 12, 32, 78, 0, 12, 4]
         },
         {
           name: 'Social Time (hours)',
-          data: [43, 56, 32, 78, 0, 12, 40]
+          data: [43, 56, 32, 78, 0, 12, 40, 56, 88, 23, 45, 12]
+        },
+        {
+          name: 'Sleep Time',
+          data: [ 50, 49, 60, 70, 99, 93, 23, 34, 99, 56, 23, 78]
         },
         {
           name: 'Health score',
-          data: [30, 40, 45, 50, 49, 60, 70]
-        },
+          data: [30, 40, 35, 70, 59, 62, 83, 67, 45, 87, 26, 90,]
+        }
       ]
     };
   },
