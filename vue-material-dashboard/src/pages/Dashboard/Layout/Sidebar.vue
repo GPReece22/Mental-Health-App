@@ -64,45 +64,7 @@
           icon: 'assessment',
           path: '/view-data' }"
         />
-
-        <sidebar-item
-            :link="{
-          name: 'Dashboard Elements [DEV]',
-          icon: 'dashboard',
-          path: '/dashboardDev' }"
-        />
-
-        <sidebar-item
-          :link="{
-            name: 'Table Lists [DEV]',
-            icon: 'content_paste',
-            path: '/components/table',
-          }"
-        />
-
-        <sidebar-item
-          :link="{
-            name: 'Typography [DEV]',
-            icon: 'library_books',
-            path: '/components/typography',
-          }"
-        />
-
-        <sidebar-item
-          :link="{
-            name: 'Icons [DEV]',
-            icon: 'bubble_chart',
-            path: '/components/icons',
-          }"
-        />
-
-        <sidebar-item
-          :link="{
-            name: 'Notifications [DEV]',
-            icon: 'notifications',
-            path: '/components/notifications',
-          }"
-        />
+        
       </template>
     </side-bar>
 
