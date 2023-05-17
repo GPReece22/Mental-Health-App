@@ -81,7 +81,7 @@
       </stats-card>
     </div>
     <div
-      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
+      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
     >
       <chart-card
         :chart-data="emailsSubscriptionChart.data"
@@ -117,7 +117,7 @@
       </chart-card>
     </div>
     <div
-      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
+      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
     >
       <chart-card
         :chart-data="dailySalesChart.data"
